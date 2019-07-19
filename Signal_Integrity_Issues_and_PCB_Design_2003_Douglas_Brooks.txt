@@ -1,0 +1,68 @@
+- The electromagnetic field and the current must move together. The current
+can't move out in front of the fields. The magnetic field can't move out in front
+of the electric field. It turns out the issue is not how fast the current
+(electrons) can flow through the conductor. The issue is how fast the
+electromagnetic field can flow through the medium it flows through, the
+medium around the wire.
+- Benjamin Franklin who stated that current flows from
+positive to negative. Benjamin Franklin made at least one mistake in his
+life, and that has stuck with us for all time since!
+- If we put a square wave onto a traceat one end, we want to get a square wave at the other end. That means our boards must be designed to handle not only the fundamental frequency of our
+digital signals, but also all of the higher order harmonics that are contained
+within it. Figure 1-12 suggests we want to be able to handle at least the tenth
+or fifteenth harmonics. So if we are dealing with a 10-MHz clock square wave,
+we need to be able to handle frequency harmonics up to at least 100 or 150
+MHz. This is why we say it is not the (clock) frequency that matters, it is the
+rise time of the waveform and the harmonics needed to reproduce it that are
+important.The term bandwidth is used to describe this requirement. The bandwidth is the
+range of frequencies we need to be able to deal with to faithfully maintain the
+integrity of our signals.
+- For a resistor, this impedance is simply a
+matter of the value of the resistor's size. But for capacitors and inductors, the
+impedance is a function of both the component's size and the frequency of the
+waveform that interacts with the component. So an inductor, for example,
+offers higher impedance as (a) its size increases and as (b) frequency goes up.
+- The true RMS value of any waveform actually relates to power. Suppose we
+applied the sine wave voltage waveform in Figure 1-7 across a resistor. The
+RMS value is the equivalent DC voltage that would generate the same power
+(i.e., heat) in the resistor. Thus, a DC voltage of .707 V across a resistor will
+heat the resistor exactly the same amount that a ± 1.0 V sine wave would.
+But this value, .707, is only the true RMS value for a sine wave. What if the
+waveform were a different shape? What if the waveform were random? The
+audio waveform shown in Figure 1-5 seems pretty random when you look
+closely at it. How could we then measure its RMS value?
+A simple AC meter measures AC waveforms accurately only if they are sine
+waves. The meters typically rectify the AC waveform and are then calibrated to
+apply a fraction to the peak value or to the average value of the rectified
+waveform. But this technique only works when the shape of the waveform is
+known to be sinusoidal. There are really only two primary ways to measure
+the "true" RMS value of a nonsinusoidal waveform. In the past, so-called
+"true" RMS meters often applied the test voltage across a resistor and
+measured the heat generated, inferring the RMS value that way. More
+recently, with improved calculational power, we can use microprocessor-based
+- It is power, the combined effect of voltage
+and current, that is dangerous, not necessarily just voltage by itself
+- All materials have a characteristic called the relative dielectric coefficient (e r ).
+It is a measure of the material's ability to store charge. It is called relative
+because it is referenced to the dielectric coefficient of air (really that of a
+vacuum, but the difference between air and a vacuum is so small that only
+astronomers care).
+- Circuit timing issues. The two traces of a differential pair must be the same length so that the two
+opposite signals arrive at the receiver at the same time or common mode noise may be generated
+- "Tunning" the trace. Adjusting timing this way requires two things, (a) a precise knowledge of the
+propagation speed of the signal along the trace we are interested in, and (b)
+the ability to adjust the trace length. We determine the propagation speed
+from the preceding discussion. Inherent in the determination is the knowledge
+of the relative dielectric coefficient (e r ) of the material surrounding the trace.
+We cannot make the trace shorter than the distance between its connection
+points, but we can make it longer. The normal way to adjust trace length is to
+"snake" it.
+- So why are high-speed design issues so difficult? Well, actually, they aren't so
+difficult if you really understand the behavior of the three basic components
+and how they interact. The problem is that many people, even many degreed
+engineers, do not really understand them. And that is a shame, because that
+single, simple truth is in large part the reason for so much confusion and
+mystery about high-speed design problems
+- Virtually everything we encounter in board designs can be described and analyzed in
+terms of these three components and their combination and effects.
+- When the time that need the signal to travel from the transmitter to the receiver is greater than the switching time between two states in digital design, then you are creating current distribution through the trace, creating  antennas and timing issues are gonna emerge to the surface. But these design isn't any concern about our OBC PCB desig (under the carpet for now!!).
