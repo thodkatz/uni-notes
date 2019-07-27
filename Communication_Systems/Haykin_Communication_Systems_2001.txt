@@ -1,0 +1,121 @@
+- There are three basic elements in communication systems, the transmitter, the channel and the receiver
+
+- There are two basic modes fo communication: broadcasting (1 transmitter and multiple receivers) and point-to-point (1 trnasmitter and 1 receiver)
+
+- The underlying communication process of every system is statistical in nature and that why statistics are very important in general for engineers
+
+- The primary resources are channel bandwidth and transmitted power. Of course, some commucation systems are oriented to bandwidth and other to power. Bandwidth is the range of frequencies that the transmitter is able to produce. In general, you want a transmitter to be able to transmit a wide range of frequencies.
+
+- Noise is another very improtant factor and it is caused due to channel imperfections and other disturbances, that lead to disturb the signal and lose some sort of information along the way. For noise, we introduced another term, the SNR (sinal-noise ratio) that implicates the ratio of the average signal power to the average noise power and it is measured in decibels. Decibels is ten times the logarith (base of ten) of the ratio power.
+
+- The source of information can be divided to four categories: speech, music, pictures, computer data (text, etc)
+
+- Communication networks. Telephone network and circuit switching. Internet has tree basic elemetns, host, router, subnets. Host carry the data, router are intermediate nodes and within a subnet, host can communicate with each other withour routers.
+
+- Protocols and OSI
+
+- The telephone newtwork because of the increasing need and demands is evolving to B-ISDN.
+
+- Communication channels. Divided to signals that are propagate guided and those that propagate freely, coaxial cables and wireless systems respectively. The telephone channel is a limited bandwidth channel and this is the challenge. The restriction in bandwidth is caused by the need to communicate multiple users at one time.
+
+- Optical fiber, coaxial cable, twisted cables, satellite channel. wireless networks, mobile network
+
+- A channel may be linear or non linear
+A channel may be power limited or bandwidth limited
+A channel may be time variant or time varying
+A signal is said to be band-limited or bandwidth-limited if it can be represented by a finite number of harmonics. Engineers limit the bandwidth of signals to enable multiple signals to share the same channel with minimal interference. A key result that pertains to bandwidth-limited signals is Nyquist’s sampling theorem, which states that a signal of bandwidth B can be reconstructed by taking 2B samples every second.
+
+- Nice link https://www.britannica.com/science/information-theory/Classical-information-theory
+
+- It is very important to understand the terms and the challenges of the customer needs, bandwidth (use it as best/efficiently as you can, cause the frequency spectrum is limited), power, SNR, the type of communication system, the signal analysis, fourier, Nyquist, Shannon, information theory and so much more I quess.
+
+- Modulation process. Modulation is divided to continuous wave and pulse wave modulation. CW is divided to AM,FM, phase modulation. The pulse modualtion is divided to PAM, PDM, PPM ,PCM (PCM is for digital)
+
+- Why digital over analog? Digital is more robust and reliable. But radio and television are under the analog communication label and some aspect of analog affected the digital, so it is improtant ot understand how analog works and analog consume a little power instead of digital.
+
+- Information capacity theorem of Shannon (measured in bit error rate). A bigger bandwidth leads to a lower SNR.
+
+- Transducer. In telephone, a transducer can convert an electric singal to an audio signal
+
+- The baseband is the band that describes the original signal and not the modualated.
+
+- I think angle modualation is phase and frequency modualtion. So CW is divided to angle and amplitude modualation.
+
+- Why we need to modulate the waves: 1)In order to use specific ranges from the frequency spectrum (not everything is able nowadays), 2)to achieve better SNR, 3)to reduce the length of some antennas and more I guess..
+
+- About modulation, you need to consider how applicable is also the demodulation. Modulation using multiplication between the original signal and the carrier. The process is called heterodyne. This type of modulation requires a very good timing between the modulation and the demodulation and it isn't a very simple way of modulation. Instead in AM, demodulation typically requires a simple filter. There are of course many ways to demodulate the modulated carrier and many way to modulate the carrier and each combination requires a suitable hardware configuration. There are also some techniques like sing side band that has the same effect with double side band, but now it is used only pne side, the upper or lower (this applies in multiplication between carry and signal). The advantage is that you reduce the frequency spectrum to do your job, but requires specific and well synced filters. + square law for demodulation                                                             
+
+------------------------------------------------------------------------------------------------------------------------------
+
+- About how to learn communication systems and everyhting in general (the power of abstractness and application). Classically,
+students learn probability and random processes, and then tackle communication. This does not
+quite work today: students increasingly (and I believe, rightly) question the applicability of the
+material they learn, and are less interested in abstraction for its own sake. On the other hand,
+I have found from my own teaching experience that students get truly excited about abstract
+concepts when they discover their power in applications, and it is possible to provide the means
+for such discovery using software packages such as Matlab. Thus, we have the opportunity to
+get a new generation of students excited about this field: by covering abstractions “just in time”
+to shed light on engineering design, and by reinforcing concepts immediately using software ex-
+periments in addition to conventional pen-and-paper problem solving, we can remove the lag
+between learning and application, and ensure that the concepts stick.
+
+- Techniques for performing the mapping from the original source signal to a bit sequence are generically termed source coding. Shannon was the inventor of information theory. Sampling, discrete values, I dont need all the information, maybe part of it.
+
+- While physically realizable signals such
+as those sent over a wire or over the air must take real values, we shall see that it is extremely
+30useful (and physically meaningful) to consider a pair of real-valued signals, interpreted as the
+real and imaginary parts of a complex-valued signal. Thus, in general, we allow signals to take
+complex values.
+
+- While signals
+sent over a physical communication channel are inherently continuous time, implementations at
+both the transmitter and receiver make heavy use of discrete time implementations on digitized
+samples corresponding to the analog continuous time waveforms of interest
+
+- We specifically emphasize the fact that a real-valued passband signal is
+equivalent (in a mathematically convenient and physically meaningful sense) to a complex-valued
+baseband signal, called the complex baseband representation, or complex envelope, of the pass-
+band signal
+
+- Thus, the delta function is defined mathematically by the way it acts on other signals, rather
+than as a signal by itself. However, it is also important to keep in mind its intuitive interpretation
+as (the limit of) a tall, thin, pulse of unit area.
+
+- Representation of signals with complex numbers, in order to make our lives easier in terms of mathematics and anlyzing the signals. The impulse function, dirac, the definition of power in signal. The complex number is actually the presentation of a pair of real signals in the real and imaginary part of the complex number. The real part of the complex contains the real signal, the baseband actually.
+
+- The inerr product of the signal itself is defined as the energy of the signal
+
+- The power of the signal is the time average of its energy computed in a large time interval.
+
+- inear time invariant (LTI) systems, which provide good models
+for filters at the transmitter and receiver, as well as for the distortion induced by a variety of
+channels. We shall see that the input-output relationship is particularly easy to characterize for
+such systems.
+
+- convolusion. A convolution is a mathematical operation that represents a signal passing through a LTI (Linear and Time-Invariant) system or filter. If we have a signal s(t) passing through a system with impulse response h(t), the output is the convolution of s(t) with h(t)
+
+- Modeling a multipath channel
+
+- Upsampling, convolution in complex numbers. Convolution is basicly a process that a third signal is produced and indicates how the one has been affected by the other (the two signals that produce the third)
+
+- Using mathematical machinery beyond our current scope, it can be shown that any periodic signal
+with period T 0 (subject to mild technical conditions) can be expressed as a linear combination
+of complex exponentials whose frequencies are integer multiples of the fundamental frequency (harmonics)
+
+- Fourier series of an impulse train
+
+- Complex exponentials are eigenfunctions of LTI systems
+
+- It is useful to keep in mind the geometric meaning of this relationship. The space of periodic signals can be thought of in the same way as the finite-dimensional vector spaces we are familiar
+with 
+
+- In addition, while many classical analog processing functionalities
+are replaced by digital signal processing in modern digital communication transceivers, when we
+push the limits of digital communication systems, in terms of lowering power consumption or
+increasing data rates, it is often necessary to fall back on analog-centric, or hybrid digital-analog,
+techniques. This is because the analog-to-digital conversion required for digital transceiver im-
+91plementations may often be too costly or power-hungry for ultra high-speed, or ultra low-power,
+implementations
+
+- The equations describe the baseband and the passband signal. The I and the Q, the envelope and the phase. Modulation affects/take place in these terms.
+

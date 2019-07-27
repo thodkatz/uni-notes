@@ -1,0 +1,31 @@
+- what is a signal? What tools do we use to analyze and comprehend the signals and what are their application, why we need them?
+
+- Signal interconnections, modulation and transformation. Linear, time invariant signals
+
+- Rule of thumb: every signal is the sum of an odd and even signal
+
+- What are harmonics and why the complex (imaginary part) exponential is so important and used quite often. That is because it can be used as the basic signal that constitutes others (+ superposition)
+
+- Energy, power of a signal. Euler equation
+
+- Differneces between continuous and discrete signals (complex exponentials, period)
+
+- unit step, unit impulse
+
+- what is a system? The relationship between input and output? Linking subsystems. Systems in series, parallel, feedback. Linear, time invariant, system with memory. Its all about modeling and categorizing the world around us. This help us to communicate and analyze, define situations.
+
+- The magic world of linear time invariant system. Every signal is constitute from the sum of simpler ones. So if you know how your system behaves in the input of the unit impulse then you can compute the output of every possible random signal
+
+- Another way to decompose a signal to its simpler parts, except the unit umpulse, is the Fourier series. Historical notes on Fourier. We needed time to accept the Fourier analysis and we haven't realized for a long time that in the nature, oscillations, are basically everywhere. We thought oscialltions was only a small part of the signals applications.
+
+- one dimensional and multidimensional signals. The number of the independent variables. One dimensional is speech and multidimensional an image.
+
+- eigenfunction, eigenvalue
+
+- Time domain, frequency domain (fourier, laplace, z transform)
+
+- Gibbs, Parseval, Dirichlet
+
+- Can every periodic signals describred with the Fourier series, or there some requirements. In general, most of the signals can be described through Fourier, but the requieremnts are defined from Dirichlet
+
+- FM and PM modualtions are non linear and the superposition cannot be applied, so it is more difficult to analyze those signals but they are more efficient in terms of noise. Also, it is more difficult cause to the non linearity to visualize the message signal in the modulated singal in comparison with AM. Angle modualtion requires more bandwidth. Bandwidth and noise

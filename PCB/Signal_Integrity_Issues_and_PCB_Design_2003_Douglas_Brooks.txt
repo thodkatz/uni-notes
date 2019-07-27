@@ -4,9 +4,11 @@ of the electric field. It turns out the issue is not how fast the current
 (electrons) can flow through the conductor. The issue is how fast the
 electromagnetic field can flow through the medium it flows through, the
 medium around the wire.
+
 - Benjamin Franklin who stated that current flows from
 positive to negative. Benjamin Franklin made at least one mistake in his
 life, and that has stuck with us for all time since!
+
 - If we put a square wave onto a traceat one end, we want to get a square wave at the other end. That means our boards must be designed to handle not only the fundamental frequency of our
 digital signals, but also all of the higher order harmonics that are contained
 within it. Figure 1-12 suggests we want to be able to handle at least the tenth
@@ -17,11 +19,13 @@ rise time of the waveform and the harmonics needed to reproduce it that are
 important.The term bandwidth is used to describe this requirement. The bandwidth is the
 range of frequencies we need to be able to deal with to faithfully maintain the
 integrity of our signals.
+
 - For a resistor, this impedance is simply a
 matter of the value of the resistor's size. But for capacitors and inductors, the
 impedance is a function of both the component's size and the frequency of the
 waveform that interacts with the component. So an inductor, for example,
 offers higher impedance as (a) its size increases and as (b) frequency goes up.
+
 - The true RMS value of any waveform actually relates to power. Suppose we
 applied the sine wave voltage waveform in Figure 1-7 across a resistor. The
 RMS value is the equivalent DC voltage that would generate the same power
@@ -40,15 +44,31 @@ the "true" RMS value of a nonsinusoidal waveform. In the past, so-called
 "true" RMS meters often applied the test voltage across a resistor and
 measured the heat generated, inferring the RMS value that way. More
 recently, with improved calculational power, we can use microprocessor-based
+
 - It is power, the combined effect of voltage
 and current, that is dangerous, not necessarily just voltage by itself
+
 - All materials have a characteristic called the relative dielectric coefficient (e r ).
 It is a measure of the material's ability to store charge. It is called relative
 because it is referenced to the dielectric coefficient of air (really that of a
 vacuum, but the difference between air and a vacuum is so small that only
 astronomers care).
+
 - Circuit timing issues. The two traces of a differential pair must be the same length so that the two
 opposite signals arrive at the receiver at the same time or common mode noise may be generated
+About (the reason of) differential signaling and common mode noise: Practically all integrated circuits (and circuits in general) have a pin 
+named "ground" or "GND", or the datasheet says things like "connect VSS to ground".
+
+When transmitting data "a long distance", the wires act as antennas and can easily pick up a few volts of noise, and also radiate noise.
+So, for example, an output pin on a chip in one box may transmit a "0" as about 0.5 V and transmit a "1" bit as about 2.5 volt, measured 
+relative to the ground pin of that same "line driver" chip.
+
+At a distant location, the other end of the wire is often connected to a pin on a "line receiver" chip. Because of noise, the voltage on 
+that input pin, measured relative to the ground pin of that same line receiver, might often be anywhere in the range -1.5 V to +2.5 V when the
+ transmitter is trying to send a "0", and anywhere in the range 0.5 V to 4.5 V when the transmitter is trying to send a "1".
+
+So how can the receiver possibly know whether the transmitter is trying to send a 1 or a 0, when it gets a voltage like 0.9 or 2.2 ?
+
 - "Tunning" the trace. Adjusting timing this way requires two things, (a) a precise knowledge of the
 propagation speed of the signal along the trace we are interested in, and (b)
 the ability to adjust the trace length. We determine the propagation speed
@@ -57,12 +77,90 @@ of the relative dielectric coefficient (e r ) of the material surrounding the tr
 We cannot make the trace shorter than the distance between its connection
 points, but we can make it longer. The normal way to adjust trace length is to
 "snake" it.
+
 - So why are high-speed design issues so difficult? Well, actually, they aren't so
 difficult if you really understand the behavior of the three basic components
 and how they interact. The problem is that many people, even many degreed
 engineers, do not really understand them. And that is a shame, because that
 single, simple truth is in large part the reason for so much confusion and
 mystery about high-speed design problems
+
 - Virtually everything we encounter in board designs can be described and analyzed in
 terms of these three components and their combination and effects.
-- When the time that need the signal to travel from the transmitter to the receiver is greater than the switching time between two states in digital design, then you are creating current distribution through the trace, creating  antennas and timing issues are gonna emerge to the surface. But these design isn't any concern about our OBC PCB desig (under the carpet for now!!).
+
+- Personal Note: When the time that need the signal to travel from the transmitter to the receiver is greater than 
+the switching time between two states in digital design, then you are creating current distribution 
+through the trace, creating  antennas and timing issues are gonna emerge to the surface. (dont forget the caracitance and the inductance of the traces,
+that oppose to changing voltage and current respectively and the signal along the trace is sync with the capacitance-inductance-behavior of the trace)
+ But these design isn't any concern about our OBC PCB desig (under the carpet for now!!).
+
+- As trace widths get wider, propagation speed slows down! The reason for this isthat as traces widen, a larger percentage of the field lines between the trace and the plane is contained within the
+ dielectric. In the limit, with infinite trace width, virtually all the electromagnetic field is 
+contained within the dielectric. In this case, the microstrip trace really looks very much like a stripline trace.
+
+- One key to understanding what happens with a capacitor is the recognition
+that what happens is time dependent. (This is not true with resistance.) That
+is, when current first starts flowing into a capacitor, there is no voltage acrossthe plates (i.e., across the capacitor). There can be no voltage across the
+capacitor until charge builds up on the plates. But charge can't build up on the
+plates until charge (current) has actually flowed into the capacitor. Since
+current must flow before a voltage appears, we say that current leads voltage
+
+- But sometimes capacitors show up where we don't want or expect them to. For
+example, consider two traces routed side by side. Their edges can form the
+plates of a capacitor, and a signal can be coupled from one trace to the other,
+creating unwanted noise on the other trace. This is an important cause of
+crosstalk. Wirewound resistors have so much capacitive coupling between their
+wire turns that they are virtually useless, and almost never used, in higher
+frequency circuits. Unwanted and undesirable capacitive effects are among the
+top three problems in high-speed PCB designs (the other two are inductance
+and EMI)
+
+- When we place a battery across an inductor, there is
+force (voltage) across the inductor, but in the first instant there is no current
+flow. Current does begin to flow, however, and after a moment the current will
+reach an equilibrium and flow unimpeded around the loop. At that point the
+voltage across the inductor has dropped to zero. How quickly the current
+begins to flow and how quickly it reaches equilibrium depend on how large the
+inductor is. It takes longer for this to happen with a larger inductor than it
+does with a smaller inductor.
+
+- A DC current does not generate voltage across an inductor just as a steady flow
+past the paddle wheel does not need a force to keep it going (once the paddle
+wheel is up to speed). Force builds up across an inductance when the current
+flow through it is changing, working against the inertia of the inductance. One
+henry of inductance will cause one volt to appear across it when the current
+through it is changing at the rate of one amp per second 
+
+- Before we leave our hydraulic analogies, let's look at one more special case.
+Suppose we have the storage tank (capacitor) and paddle wheel (inductor) in
+parallel as shown in Figure 3-13. Suppose we turn on the pump long enough
+to have the paddle wheel turning freely (no resistance to the flow). Then, let's
+turn off the pump.
+If the conditions are just right, inertia from the paddle wheel will cause water
+to continue flowing up into the lower storage tank. This will continue until the
+pressure in the tank gets strong enough to slow, and then stop, the paddle
+wheel. But when the paddle wheel finally stops, there will be considerable
+pressure in the tank. This will cause the paddle wheel to start turning in the
+opposite direction, moving water from the lower storage tank to the upper
+storage tank. This will continue until the pressure in the upper storage tank
+becomes strong enough to slow, and then stop, the paddle wheel. By that time,
+the pressure in the upper tank will be strong enough to start the paddle wheel
+turning in the opposite direction again, moving water from the upper storage
+tank to the lower one.
+In the absence of friction (resistance), and if the tanks and paddle wheel are
+sized correctly, this can go on indefinitely! It requires no outside force or
+power to keep it going once it starts
+
+- Is the probelm the rising and the falling times? Or for how long a logic level is stable? In order to win the inerta but not very much cause the capacitor will charge...
+I am referring to the capacitance-inductance (pF and nH) in the traces.
+
+- EMI is realted to loop area. Current travels through loops, so minimizing the loops should be definitely a goal. 
+
+- Crosstalk  involves  both  capacitive  and  inductive coupling. To prevent crosstalk, you need to consider the SPACE (and trace lenght). The space
+between traces, the thickness of the dielectric material, the space between the signal and its return path. Rules of thumb to prevent corsstalk
+are: 1) the distance betweent traces should be longer than 2 times the width of the trace or 2) longer than 2-3 times the dielectric thickness. Sometimes this
+is almost impossible to have so much space, so the bigger the distance, the better as a general rule to prevent corsstalk (agressor vs victim, forward and backward crosstalk).
+
+- What is the difference between crosstalk and EMI ? About crosstalk, what is the difference between capacitive and inductive coupling ? The capacitance and inductance of a trace is related with the electromagnetic energy produced by the current (a flow of a negative net) ?
+
+- 
