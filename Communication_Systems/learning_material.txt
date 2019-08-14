@@ -1,0 +1,9 @@
+# useful urls found online:
+
+1)https://www.tutorialspoint.com/analog_communication/analog_communication_quick_guide
+
+2)https://www.electronics-notes.com/
+
+3)https://www.telecommunications-tutorials.com
+
+4)http://www.nptelvideos.in/2012/11/communication-engineering.html
