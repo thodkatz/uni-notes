@@ -1,3 +1,6 @@
+These notes are a combination of signals and systems and telecommunication systems from haykin, the greek edition (recommended book from Dimakis)
+
+
 - what is a signal? What tools do we use to analyze and comprehend the signals and what are their application, why we need them?
 
 - Signal interconnections, modulation and transformation. Linear, time invariant signals
@@ -28,4 +31,24 @@
 
 - Can every periodic signals describred with the Fourier series, or there some requirements. In general, most of the signals can be described through Fourier, but the requieremnts are defined from Dirichlet
 
-- FM and PM modualtions are non linear and the superposition cannot be applied, so it is more difficult to analyze those signals but they are more efficient in terms of noise. Also, it is more difficult cause to the non linearity to visualize the message signal in the modulated singal in comparison with AM. Angle modualtion requires more bandwidth. Bandwidth and noise
+- FM and PM modualtions are non linear and the superposition cannot be applied, so it is more difficult to analyze those signals but they are more efficient in terms of noise. Also, it is more difficult cause to the non linearity to visualize the message signal in the modulated singal in comparison with AM. Angle modualtion requires more bandwidth. Bandwidth and noise. What about in terms of power?
+
+- Angle modulation. The message signals is "hidden" in the zero crossings. In AM is "hidden" in the envelope 
+
+- FM two types: narrowband, wideband, β, Bessel, Bandwidth of the FM modulated signal and the Carson's rule to calculate it
+
+- types of filters: 1)βαθυπερατό, 2)υψηπερατό, 3)ζωνοπερατό, 4)ζωνοφραγμένο
+
+- How to generate in real life (electronics) a FM signal and how to demodulate, what problems emerge and how we solved them, different techniques...
+
+- Γενικά, δυσκολεύομαι με την χρήση αγγλικών όρων, για αυτό θα χρησιμοποιώ την Ελληνική γλώσσα σε σημεία που θέλω να "ξαμολήσω" την σκέψη μου
+
+- Το πρόβλημα τώρα είναι να καταλάβουμε την ύπαρξη συγκεκριμένων διατάξεων και πότε θα πρέπει να χρησιμοποιηθούν, όπως για παράδειγμα την διάταξη ("block") του διευκρινιστή συχνότητας, τον πολλαπλασιαστή συχνότητας, τον μίκτη, ταλαντωτής υψηλής σταθερότητας
+
+- Μετά τον ορισμό της διαμόρφωσης κατα γωνία, ο haykin εστίαζει στην FM διαμόρφωση και προκύπτουν δύο κατηγορίες στην προσπάθεια μας να υπολογίσουμε την διαμόρφωση ενός μονότονου σήματος. Αυτές οι κατηγορίες είναι σήματα στενής ζώνης και ευρείας ζώνης και προκύπτουν απο τον δείκτη διαμόρφωσης β, ο οποίος αποτελεί κλάσμα της απόκλισης της συχνότητας, δηλαδή την μέγιστη απόκλιση της στιγμιαίας συχνότητας απο την συχνότητα του φέροντος προς την συχνότητα του φέροντος. Για β μικρό, κάνουμε κάποιες προσεγγίσεις και η φασματική απόκριση, ο μετασχηματισμός Fourier προσομοιάζει την ΑΜ διαμόρφωση. Πώς γίνεται αυτό, θα το ξανακοιτάξω...Στην συνέχεια μελετάει τα σήματα ευρείας ζώνης και κάνει κάποιες προσεγγιεις προκειμένου να χρησιμοποιήσει μιγαδικά εκθετικά για την ανάλυση του. Έτσι προκύπτει η μιγαδική περιβάλλουσα της οποίας ο μετασχηματισμός φουριέρ οδηγεί στην εμφάνιση των συναρτήσεων μπέσελ, που αποτελούν ένα διάγρμμα προσέγγισης των βαρών του μετασχηματισμού φουριερ. Στο διάγραμμα αυτό αλλάζει το n,το β και το βάρος. Στη συνέχεια κάνεις τις κατάλληλες αντικατατάεις και έχεις τον μετασχηματισμό φουριερ σήματος ΦΜ ευρείας ζώνης. Πώς όμως μπορείς στον πραγματικό κόσμο να δημιουργήσεις ένα σήμα ΦΜ. Αρχικά υπάρχει ο άμεσος τρόπος χρησιμοποιώντας voltage control oscillator και κατάλληλες διατάξεις όπως μίκτες, πολλαπλασιαστές και ταλαντωτές σταθερής συχνότητας. Το πρόβλημα με αυτόν τον τρόπο είναι ότι η συχνότητα του φέροντος εμφανίζει πρόβληματα σταθερότητας. Φια αυτό το λόγο χρησιμοποιούνται κατάλληλες διατάξεις βρόχων, όπως το frequency locked loop, το οποίο λειτουργεί με έναν τρόπο που δεν θυμάμαι και ισοσταθμίζει το πρόβλημα της σταθερότητας της συχνότητας του φέροντος. Ένας άλλος έμεσος τρόπος να δημιουργήσεις FMNB και στη συνέχεια με κατάλληλες διατάξεις να ρυθμίσεις τις καταλληλες συχνότητες στις επιθυμητές τιμές (τον έμμεσο τρόπο, τον αναφέρει μόνο ο Proakis, για αυτό το λόγο καλόν είναι να διαβάζεις απο πολλαπλές πηγές για πολλούς και διαφορετικούς λόγους). Όσον αφορά το κομμάτι της αποδιαμόρφωσης, υπάρχουν επίσης κατάλληλες τεχνικές, μία απο αυτήν είναι η μετατροπή ΦΜ σε ΑΜ και στη συνέχεια ΑΜ αποδιαμόρφωση. Έχουμε πάλι δύο γενικά είδη, τον άμεσο και τον έμμεσο τρόπο. Ο άμεσος έχει να κάνει με τον διευκρινιστή συχνότητας και ο έμμεσος με το phased locked loop. Ο άμεσος είναι αρκετά περίπλοκος και έχει πολά στάδια επεξεργασίας του σήματος και τελικά καταλήγουμε με ένα σήμα το οποίο περιέχει την πληροφορία και στην αλλαγή της γωνίας και στην περιβάλλουσα (θέλει ψάξιμο o frequency discriminator)
+
+- Συσχέτιση FM και PM, ολοκληρωτής,διαφοριστής και ισοδύναμα block FM διαμορφωτή και PM διαμορφωτή
+
+- Λόγω της ενδογενούς μη γραμμικότητας των διαμορφωμένων κατα γωνία σημάτων ο ακριβής χαρακτηρισμός των φασματικών τους ιδιοτήτων είναι δυσχερής και για υτό το λόγο μελετάμε ημιτεινοειδή και γενικά περιοδικά σήματα
+
+- Time domain, frequency domain, include carrier or not, what are the advantages and the disadvantages( electronics notes for radio are amazing source of information)  

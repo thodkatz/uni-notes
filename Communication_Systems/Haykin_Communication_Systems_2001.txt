@@ -1,3 +1,6 @@
+The notes are from Telecommunications systems, Haykin, 2001, English editiion...
+
+
 - There are three basic elements in communication systems, the transmitter, the channel and the receiver
 
 - There are two basic modes fo communication: broadcasting (1 transmitter and multiple receivers) and point-to-point (1 trnasmitter and 1 receiver)
@@ -46,6 +49,8 @@ A signal is said to be band-limited or bandwidth-limited if it can be represente
 - About modulation, you need to consider how applicable is also the demodulation. Modulation using multiplication between the original signal and the carrier. The process is called heterodyne. This type of modulation requires a very good timing between the modulation and the demodulation and it isn't a very simple way of modulation. Instead in AM, demodulation typically requires a simple filter. There are of course many ways to demodulate the modulated carrier and many way to modulate the carrier and each combination requires a suitable hardware configuration. There are also some techniques like sing side band that has the same effect with double side band, but now it is used only pne side, the upper or lower (this applies in multiplication between carry and signal). The advantage is that you reduce the frequency spectrum to do your job, but requires specific and well synced filters. + square law for demodulation                                                             
 
 ------------------------------------------------------------------------------------------------------------------------------
+I switched to a textbook found online. It is quite good for introduction and well-oriented for understanding telecommunication systems, but I switched to Haykin and Proakis. But it is also a good reference point
+
 
 - About how to learn communication systems and everyhting in general (the power of abstractness and application). Classically,
 students learn probability and random processes, and then tackle communication. This does not
