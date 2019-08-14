@@ -151,7 +151,7 @@ In the absence of friction (resistance), and if the tanks and paddle wheel are
 sized correctly, this can go on indefinitely! It requires no outside force or
 power to keep it going once it starts
 
-- Is the probelm the rising and the falling times? Or for how long a logic level is stable? In order to win the inerta but not very much cause the capacitor will charge...
+- Is the problem the rising and the falling times? Or for how long a logic level is stable? In order to win the inerta but not very much cause the capacitor will charge...
 I am referring to the capacitance-inductance (pF and nH) in the traces.
 
 - EMI is realted to loop area. Current travels through loops, so minimizing the loops should be definitely a goal. 
