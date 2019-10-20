@@ -1,0 +1,7 @@
+- What is an operation amplifier? A differential amplifier? A current mirror? How to increase the gain of an amplifier? What it is exactly, how they have been made years ago? Types of ampifiers?
+
+- What are the challenges? What is an ideal amplifier? What is common mode noise? What are the advantages of differential apmlifier over single ended and what is the term to define how the differential amplifier is able to supress the noise? What factors affect the noise suppresion?
+
+- Δεν μπορώ να καταλάβω πολύ καλά την έννοια του δυναμικού και πως ακριβώς λειτουργούν τα τρανζίστορ. Για παράδειγμα στον στραγγαλισμό του καναλιού πως γίνεται να έχω μεγαλύτερη πτώση τάσης καθώς οδεύω προς την υποδοχή, ενώ η ροή του ρεύματος είναι απο την υποδοχή στην πηγή. Επίσης τι ακριβώς είναι μια μπαταρία, εφαρμογή νόμων σε πραγματικά πλαίσια, χρησιμοποιώντας breadboard και απλές ασκησούλες!
+
+- Πως μπορείς να εφαρμόσεις διαφορικό σήμα εισόδου σε έναν διαφορικό ενισχυτή MOSFET και ποιες περιπτώσεις υπάρχουν; Πως μπορείς να οδηγήσεις το ένα απο τα δύο τρανζίστορ σε αποκοπή με κατάλληλη διάταξη διαφορικής εισόδου και κατάλληλη τιμή πηγής; Πως μπορείς να συσχετίσεις τα ρεύματα με το διαφορική τάση στην είσοδο; Με ποιούς τρόπους μπορείς να πάρεις την έξοδο; Ποια είναι τα πλεονεκτήματα και τα μειονεκτήματα; Πως μπορείς να μελετήσεις έναν ενισχυτή στον οποίο μεταβάλλεται η τάση εισόδου, ανάλυση ασθενούς σήματος και τι είναι το διαφορικό ημικύκλωμα; What is virtual ground?
