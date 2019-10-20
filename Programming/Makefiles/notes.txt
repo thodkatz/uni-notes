@@ -1,0 +1,21 @@
+- What a compiler does?
+
+- Why are we using header files? How the preprocessor handles the header files? Are the headers related with linking?
+
+- What is linking in programming? What is ld?
+
+- Which are the flags of gcc and ld? How to use them?
+
+- What is objdump? 
+
+- What is happening under the hood when compiling source code?
+
+- What are object files? a.out? What are executable files? 
+
+- What is dependency hell?
+
+- Why we are using makefiles? Why we need to automate the building process?
+
+- What are phony targets in makefiles? How to use makefiles? What are implicit rules?
+
+- Makefiles or shell scripts?
