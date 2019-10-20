@@ -1,0 +1,15 @@
+- What is micorelectronics? Nanoelectronics? 
+
+- What are transducer?
+
+- What is an op-amp?
+
+- Discrete and integrated circuits?
+
+- Differences between analog and digital circuits? When to use the one or another?
+
+- What about the history of electronics? Vacuum tubes etc
+
+- What is a diode? Which types of diodes are exist? What are the applications of diodes? How diodes are manufactured? What is a p-n junction? What about temperature as factor that influences diode's parameters?
+
+- What engineers do to solve problems with diodes quickly? Assuming constant voltage drop or ideal diode?
